@@ -5,3 +5,5 @@ if test == 123 then
 else
 	print("ddd")
 end
+
+print("ddddd")
