@@ -1,9 +1,8 @@
-local test = 123
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local bob = require(ReplicatedStorage.Shared.Classes.bob)
 
-if test == 123 then
-	print("hi")
-else
-	print("ddd")
-end
+local myBob = bob.new()
 
-print("ddddd")
+myBob.Name = "good"
+
+myBob:AHH()
