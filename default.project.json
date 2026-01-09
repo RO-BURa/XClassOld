@@ -12,6 +12,9 @@
       },
       "TypeFunctions": {
         "$path": "src/TypeFunctions"
+      },
+      "PrivateObject": {
+        "$path": "src/PrivateObject"
       }
     },
 
