@@ -1,1 +1,4 @@
-std = "roblox"
+std = ["roblox", "luau"]
+
+[config]
+global_usage = ["types"]
