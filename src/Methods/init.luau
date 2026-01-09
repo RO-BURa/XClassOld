@@ -1,20 +1,28 @@
 --!strict
 local TypeFunctions = require(script.Parent.TypeFunctions)
+
 local Methods = {}
 
-local INTERNALS = setmetatable({} :: { [any]: any }, { __mode = "kv" })
+local METAS = setmetatable({} :: { [any]: any }, { __mode = "kv" })
+
+local function getMETA(self)
+	return METAS[self]
+end
 
 local PRIVATES = {}
 
-local dd: TypeFunctions.Subtract<"good", "kj">
-
 function PRIVATES.new()
+	local internal = {}
+
 	local self = newproxy(true)
 	local self_META = getmetatable(self)
+
+	self_META.Self = self
+	self_META.Internal = internal
+
 	self_META.__metatable = "The metatable is locked"
 
-	local internal = {}
-	INTERNALS[self] = internal
+	METAS[self] = self_META
 
 	internal.Methods = {}
 
@@ -24,10 +32,6 @@ function PRIVATES.new()
 end
 
 function PRIVATES.AddMethod(self) end
-
-function Methods.AddMethod() end
-
-function Methods.AddMethods() end
 
 table.freeze(PRIVATES)
 return table.freeze({
