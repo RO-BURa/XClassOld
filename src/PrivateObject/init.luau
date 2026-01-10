@@ -1,8 +1,16 @@
-local METAS = setmetatable({}, { __mode = "kv" })
-
 local PrivateObject = {}
 
-function PrivateObject:GetMETA() end
+local METAS = setmetatable({}, { __mode = "kv" })
+
+function PrivateObject.GetMETA(self)
+	local META = METAS[self]
+
+	if META then
+		return META
+	else
+		error("No meta", 0)
+	end
+end
 
 local function new()
 	local self = setmetatable({}, { __index = PrivateObject })
