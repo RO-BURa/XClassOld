@@ -1,0 +1,26 @@
+{
+    "name": "XClass Test",
+    "tree": {
+        "$className": "DataModel",
+        "ReplicatedStorage": {
+            "$className": "ReplicatedStorage",
+
+            "Packages": {
+                "$path": "Packages",
+                
+                "XClass": {
+                    "$path": "src"
+                }
+            }
+
+        },
+
+        "ServerScriptService": {
+            "$className": "ServerScriptService",
+
+            "XClassTests": {
+                "$path": "bin/run-tests.server.luau"
+            }
+        }
+    }
+}

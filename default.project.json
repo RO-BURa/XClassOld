@@ -1,34 +1,6 @@
 {
   "name": "XClass",
   "tree": {
-    "$className": "DataModel",
-
-    "ReplicatedStorage": {
-      "XClass": {
-        "$path": "src/XClass"
-      },
-      "Methods": {
-        "$path": "src/Methods"
-      },
-      "TypeFunctions": {
-        "$path": "src/TypeFunctions"
-      },
-      "PrivateObject": {
-        "$path": "src/PrivateObject"
-      }
-    },
-
-    "ServerScriptService": {
-      "ServerPackages": {
-        "$path": "ServerPackages"
-      }
-    },
-
-    "StarterPlayer": {
-      "StarterPlayerScripts": {
-      
-      }
-    }
-
+    "$path": "src"
   }
 }
